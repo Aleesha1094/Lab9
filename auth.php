@@ -54,18 +54,20 @@ if ($_GET['radio'] == "option1") {
     sortArray($random_number_array, "DES");
 }
 
-//Activity6
+//Activity 6
+echo "Activity 6 : ";
 if ($_GET['radio'] == "option2") {
     echo "<br><br>Activity 6 with random number array : <br>";
     $limit_random_array_values = range(0, 100);
     shuffle($limit_random_array_values);
     $random_array_value = array_slice($limit_random_array_values, 0, 100);
-    foreach ($random_array_value as $a) {
-        echo "$a,";
-    }
-    echo "<br><br>Reset Array : ";
-    echo reset($random_array_value);
-   // sortArray($random_number_array, "DES");
+    echo "<pre>";
+    print_r($random_array_value);
+    echo "</pre>";
+    reset($random_array_value);
+    echo "After Reset Array : <pre>";
+    print_r($random_array_value);
+    echo "</pre>";
 }
 
 ?>
